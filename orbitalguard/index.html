@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrbitalGuard</title>
+
+    <link rel="icon" type="image/png" href="./assets/images/global/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+    <a href="./index.html" class="logo">
+        <span class="logo-icon"></span>
+        OrbitalGuard
+    </a>
+
+    <nav class="nav">
+        <a href="./index.html" class="active">Problema</a>
+        <a href="./pages/tech.html">Tecnologia</a>
+        <a href="./pages/map.html">Mapa de Órbitas</a>
+        <a href="./pages/alert.html">Alertas</a>
+        <a href="./pages/about.html">Sobre</a>
+    </nav>
+
+    <a href="./pages/access.html" class="btn-outline">Acesso Operadores</a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <p class="status">Status: 27.429 objetos rastreados em órbita</p>
+
+                <h1>O espaço está<br>ficando perigoso.</h1>
+
+                <p class="description">
+                    Detritos em órbita baixa ameaçam satélites ativos,
+                    comunicações globais e bilhões em infraestrutura espacial.
+                    O problema cresce a cada lançamento.
+                </p>
+
+                <div class="buttons">
+                    <a href="./pages/map.html" class="btn-primary">Ver o mapa orbital</a>
+                    <a href="./pages/about.html" class="btn-secondary">Saiba mais</a>
+                </div>
+            </div>
+
+            <a href="./pages/map.html" class="orbit-area" aria-label="Abrir mapa orbital">
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+                <div class="orbit orbit-3"></div>
+                <div class="orbit orbit-4"></div>
+
+                <span class="orbit-label label-leo">LEO</span>
+                <span class="orbit-label label-meo">MEO</span>
+                <span class="orbit-label label-geo">GEO</span>
+
+                <div class="earth">Terra</div>
+
+                <span class="space-dot yellow-dot dot-1"></span>
+                <span class="space-dot yellow-dot dot-2"></span>
+                <span class="space-dot yellow-dot dot-3"></span>
+                <span class="space-dot red-space-dot dot-4"></span>
+                <span class="space-dot red-space-dot dot-5"></span>
+                <span class="space-dot gray-space-dot dot-6"></span>
+
+                <div class="collision">
+                    <span class="collision-dot"></span>
+                    <span class="collision-label">CDM</span>
+                </div>
+            </a>
+        </section>
+
+        <section class="stats">
+            <a href="./pages/map.html" class="stat">
+                <h2>27.429</h2>
+                <p>objetos rastreados em órbita</p>
+            </a>
+
+            <a href="./pages/about.html" class="stat">
+                <h2 class="yellow">$900B</h2>
+                <p>em infraestrutura espacial em risco</p>
+            </a>
+
+            <a href="./pages/map.html" class="stat">
+                <h2>500.000+</h2>
+                <p>fragmentos &gt;1cm não rastreáveis</p>
+            </a>
+
+            <a href="./pages/alert.html" class="stat">
+                <h2 class="red">1 em 10</h2>
+                <p>satélites com alerta de colisão ativo</p>
+            </a>
+        </section>
+
+        <section class="problem">
+            <div class="problem-text">
+                <p class="tag">O efeito Kessler</p>
+
+                <h2>
+                    Uma colisão gera detritos.<br>
+                    Detritos geram mais colisões.
+                </h2>
+
+                <p>
+                    Proposto pelo cientista da NASA Donald Kessler em 1978,
+                    o efeito descreve um cenário em cascata onde a densidade
+                    de objetos em órbita baixa atinge um ponto crítico —
+                    tornando certas faixas orbitais inutilizáveis por décadas.
+                </p>
+
+                <p>
+                    Satélites de comunicação, GPS, meteorologia e observação
+                    da Terra dependem dessas órbitas. O custo de uma cascata
+                    Kessler seria incalculável para a civilização moderna.
+                </p>
+            </div>
+
+            <div class="orbit-cards">
+                <a href="./pages/map.html" class="card">
+                    <span class="card-dot red-dot"></span>
+                    <h3>LEO — Órbita Baixa (160–2.000 km)</h3>
+                    <p>Maior concentração de detritos. ISS, Starlink, satélites de observação.</p>
+                </a>
+
+                <a href="./pages/map.html" class="card">
+                    <span class="card-dot yellow-dot"></span>
+                    <h3>MEO — Órbita Média (2.000–35.786 km)</h3>
+                    <p>GPS, GLONASS, Galileo. Risco moderado, fragmentos persistentes.</p>
+                </a>
+
+                <a href="./pages/map.html" class="card">
+                    <span class="card-dot gray-dot"></span>
+                    <h3>GEO — Órbita Geoestacionária (35.786 km)</h3>
+                    <p>Comunicação e TV. Detritos permanecem por milênios sem decaimento.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span>© OrbitalGuard</span>
+        <span>Dados: ESA DISCOS · NASA Space-Track · NORAD</span>
+        <span>© 2025 OrbitalGuard</span>
+    </footer>
+
+<div class="side-menu">
+    <a href="./index.html">Problema</a>
+    <a href="./pages/tech.html">Tecnologia</a>
+    <a href="./pages/map.html">Mapa de Órbitas</a>
+    <a href="./pages/alert.html">Alertas</a>
+    <a href="./pages/about.html">Sobre</a>
+
+    <a href="../pages/access.html" class="menu-operator">
+        Acesso Operadores
+    </a>
+</div>
+
+<script src="./assets/js/menu.js"></script>
+
+</body>
+
+</html>

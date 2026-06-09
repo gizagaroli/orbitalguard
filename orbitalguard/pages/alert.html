@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alertas | OrbitalGuard</title>
+
+    <link rel="icon" type="image/png" href="../assets/images/global/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/alert.css">
+</head>
+
+<body>
+
+    <header class="header">
+    <a href="../index.html" class="logo">
+        <span class="logo-icon"></span>
+        OrbitalGuard
+    </a>
+
+    <nav class="nav">
+        <a href="../index.html">Problema</a>
+        <a href="./tech.html">Tecnologia</a>
+        <a href="./map.html">Mapa de Órbitas</a>
+        <a href="./alert.html" class="active">Alertas</a>
+        <a href="./about.html">Sobre</a>
+    </nav>
+
+    <a href="../pages/access.html" class="btn-outline">Acesso Operadores</a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+    <main class="alert-main">
+        <section class="alert-hero">
+            <div>
+                <p class="status">Monitoramento em tempo real</p>
+                <h1>Alertas de Colisão</h1>
+            </div>
+
+            <div class="alert-summary">
+                <div>
+                    <strong class="critical">3</strong>
+                    <span>Nível Crítico</span>
+                </div>
+
+                <div>
+                    <strong class="attention">11</strong>
+                    <span>Nível Atenção</span>
+                </div>
+
+                <div>
+                    <strong>47</strong>
+                    <span>Nível Alerta</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="alert-content">
+            <div class="alert-filters">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="critico">Crítico</button>
+                <button class="filter-btn" data-filter="atencao">Atenção</button>
+                <button class="filter-btn" data-filter="alerta">Alerta</button>
+            </div>
+
+            <div class="alert-table">
+                <div class="table-head">
+                    <span>Nível</span>
+                    <span>Objeto 1</span>
+                    <span>Objeto 2</span>
+                    <span>Miss Dist.</span>
+                    <span>Pc</span>
+                    <span>TCA (UTC)</span>
+                    <span>Órbita</span>
+                </div>
+
+                <article class="table-row" data-level="critico">
+                    <div><span class="badge critical-badge">Crítico</span></div>
+                    <div>
+                        <strong>STARLINK-2305</strong>
+                        <small>NORAD #48078</small>
+                    </div>
+                    <div>
+                        <strong>COSMOS 2251 DEB</strong>
+                        <small>NORAD #34428</small>
+                    </div>
+                    <strong class="critical">0.143 km</strong>
+                    <strong class="critical">1/1.200</strong>
+                    <strong>18:47 UTC</strong>
+                    <span class="orbit-red">LEO</span>
+                </article>
+
+                <article class="table-row" data-level="critico">
+                    <div><span class="badge critical-badge">Crítico</span></div>
+                    <div>
+                        <strong>ISS (ZARYA)</strong>
+                        <small>NORAD #25544</small>
+                    </div>
+                    <div>
+                        <strong>SL-16 R/B DEB</strong>
+                        <small>NORAD #40014</small>
+                    </div>
+                    <strong class="critical">0.291 km</strong>
+                    <strong class="critical">1/2.800</strong>
+                    <strong>21:12 UTC</strong>
+                    <span class="orbit-red">LEO</span>
+                </article>
+
+                <article class="table-row" data-level="atencao">
+                    <div><span class="badge attention-badge">Atenção</span></div>
+                    <div>
+                        <strong>SENTINEL-2A</strong>
+                        <small>NORAD #40697</small>
+                    </div>
+                    <div>
+                        <strong>FENGYUN 1C DEB</strong>
+                        <small>NORAD #29228</small>
+                    </div>
+                    <strong class="attention">1.204 km</strong>
+                    <strong class="attention">1/8.500</strong>
+                    <strong>23:58 UTC</strong>
+                    <span class="orbit-red">LEO</span>
+                </article>
+
+                <article class="table-row" data-level="atencao">
+                    <div><span class="badge attention-badge">Atenção</span></div>
+                    <div>
+                        <strong>GPS IIF-3</strong>
+                        <small>NORAD #38833</small>
+                    </div>
+                    <div>
+                        <strong>BREEZE-M DEB</strong>
+                        <small>NORAD #37736</small>
+                    </div>
+                    <strong class="attention">2.870 km</strong>
+                    <strong class="attention">1/14.200</strong>
+                    <strong>02:34 UTC</strong>
+                    <span class="orbit-yellow">MEO</span>
+                </article>
+
+                <article class="table-row" data-level="alerta">
+                    <div><span class="badge alert-badge">Alerta</span></div>
+                    <div>
+                        <strong>TERRA</strong>
+                        <small>NORAD #25994</small>
+                    </div>
+                    <div>
+                        <strong>IRIDIUM 33 DEB</strong>
+                        <small>NORAD #33774</small>
+                    </div>
+                    <strong class="alert-blue">5.112 km</strong>
+                    <strong class="alert-blue">1/48.000</strong>
+                    <strong>06:09 UTC</strong>
+                    <span>LEO</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span>© OrbitalGuard</span>
+        <span>Dados: ESA DISCOS · NASA Space-Track · NORAD</span>
+        <span>© 2025 OrbitalGuard</span>
+    </footer>
+
+    <script src="../assets/js/alert.js"></script>
+
+    <div class="side-menu">
+
+        <a href="../index.html">Problema</a>
+        <a href="./tech.html">Tecnologia</a>
+        <a href="./map.html">Mapa de Órbitas</a>
+        <a href="./alert.html">Alertas</a>
+        <a href="./about.html">Sobre</a>
+        <a href="../pages/access.html" class="menu-operator">Acesso Operadores</a>
+
+    </div>
+
+    <script src="../assets/js/menu.js"></script>
+    
+</body>
+
+</html>

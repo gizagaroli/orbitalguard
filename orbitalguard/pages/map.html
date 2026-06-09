@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Órbitas | OrbitalGuard</title>
+
+    <link rel="icon" type="image/png" href="../assets/images/global/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/map.css">
+</head>
+
+<body>
+
+    <header class="header">
+    <a href="../index.html" class="logo">
+        <span class="logo-icon"></span>
+        OrbitalGuard
+    </a>
+
+    <nav class="nav">
+        <a href="../index.html">Problema</a>
+        <a href="./tech.html">Tecnologia</a>
+        <a href="./map.html" class="active">Mapa de Órbitas</a>
+        <a href="./alert.html">Alertas</a>
+        <a href="./about.html">Sobre</a>
+    </nav>
+
+    <a href="../pages/access.html" class="btn-outline">
+        Acesso Operadores
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+    <main class="map-main">
+        <section class="map-view">
+            <div class="orbital-map">
+                <div class="map-orbit map-orbit-1"></div>
+                <div class="map-orbit map-orbit-2"></div>
+                <div class="map-orbit map-orbit-3"></div>
+                <div class="map-orbit map-orbit-4"></div>
+
+                <div class="map-earth">Terra</div>
+
+                <span class="map-label label-leo">LEO</span>
+                <span class="map-label label-meo">MEO</span>
+                <span class="map-label label-geo">GEO</span>
+
+                <span class="object yellow obj-1" data-orbit="meo"></span>
+                <span class="object yellow obj-2" data-orbit="meo"></span>
+                <span class="object yellow obj-3" data-orbit="meo"></span>
+
+                <span class="object red obj-4" data-orbit="leo"></span>
+                <span class="object red obj-5" data-orbit="leo"></span>
+                <span class="object red obj-6" data-orbit="leo"></span>
+                <span class="object red obj-7" data-orbit="leo"></span>
+                <span class="object red obj-8" data-orbit="leo"></span>
+
+                <span class="object blue obj-9" data-orbit="geo"></span>
+
+                <span class="danger-line"></span>
+            </div>
+        </section>
+
+        <aside class="map-panel">
+            <div class="panel-block">
+                <p class="status">Ao vivo · Atualizado <span id="map-time"></span></p>
+                <h1>Mapa de Órbitas</h1>
+            </div>
+
+            <div class="panel-block">
+                <p class="panel-title">Filtrar por órbita</p>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-filter="leo">LEO</button>
+                    <button class="filter-btn" data-filter="meo">MEO</button>
+                    <button class="filter-btn" data-filter="geo">GEO</button>
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                </div>
+            </div>
+
+            <div class="panel-block orbit-counts">
+                <div>
+                    <span class="red-dot"></span>
+                    <p>LEO <small>160-2.000 km</small></p>
+                    <strong>19.544</strong>
+                </div>
+
+                <div>
+                    <span class="yellow-dot"></span>
+                    <p>MEO <small>2k-35.786 km</small></p>
+                    <strong>4.986</strong>
+                </div>
+
+                <div>
+                    <span class="gray-dot"></span>
+                    <p>GEO <small>35.786 km</small></p>
+                    <strong>3.067</strong>
+                </div>
+            </div>
+
+            <div class="panel-block">
+                <p class="panel-title">Conjunção ativa</p>
+
+                <div class="alert-card">
+                    <div class="alert-header">
+                        <h2>STARLINK-3256</h2>
+                        <span>RED</span>
+                    </div>
+
+                    <p class="alert-subtitle">COSMOS 2251 DEB</p>
+
+                    <div class="alert-grid">
+                        <div>
+                            <small>Miss Dist.</small>
+                            <strong>0.143 km</strong>
+                        </div>
+
+                        <div>
+                            <small>Pc</small>
+                            <strong>1/1.200</strong>
+                        </div>
+
+                        <div>
+                            <small>TCA</small>
+                            <strong>18:47 UTC</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="../assets/js/map.js"></script>
+
+<div class="side-menu">
+
+        <a href="../index.html">Problema</a>
+        <a href="./tech.html">Tecnologia</a>
+        <a href="./map.html">Mapa de Órbitas</a>
+        <a href="./alert.html">Alertas</a>
+        <a href="./about.html">Sobre</a>
+        <a href="../pages/access.html" class="menu-operator">Acesso Operadores</a>
+
+    </div>
+
+    <script src="../assets/js/menu.js"></script>
+
+</body>
+
+</html>

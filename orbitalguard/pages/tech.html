@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia | OrbitalGuard</title>
+
+    <link rel="icon" type="image/png" href="../assets/images/global/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/tech.css">
+</head>
+
+<body>
+
+    <header class="header">
+    <a href="../index.html" class="logo">
+        <span class="logo-icon"></span>
+        OrbitalGuard
+    </a>
+
+    <nav class="nav">
+        <a href="../index.html">Problema</a>
+        <a href="./tech.html" class="active">Tecnologia</a>
+        <a href="./map.html">Mapa de Órbitas</a>
+        <a href="./alert.html">Alertas</a>
+        <a href="./about.html">Sobre</a>
+    </nav>
+
+    <a href="../pages/access.html" class="btn-outline">
+        Acesso Operadores
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+    <main class="tech-main">
+        <section class="tech-hero">
+            <div class="tech-text">
+                <p class="status">Como funciona</p>
+
+                <h1>Da órbita ao alerta<br>em tempo real.</h1>
+
+                <p class="description">
+                    O OrbitalGuard integra dados abertos da ESA e NASA para
+                    rastrear, calcular riscos e emitir alertas de colisão para
+                    operadores de satélites.
+                </p>
+            </div>
+
+            <div class="tech-globe">
+                <video autoplay muted loop playsinline>
+                    <source src="../assets/images/local/globe.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section class="steps">
+            <article class="step-card">
+                <span>01</span>
+                <h2>Coleta de Dados</h2>
+                <p>
+                    TLEs atualizados diariamente via Space-Track.org e ESA DISCOS.
+                    Cobertura de 27k+ objetos catalogados.
+                </p>
+
+                <div class="chips">
+                    <small>Space-Track API</small>
+                    <small>ESA DISCOS</small>
+                </div>
+            </article>
+
+            <article class="step-card">
+                <span>02</span>
+                <h2>Processamento Orbital</h2>
+                <p>
+                    Cálculo de trajetórias e propagação orbital usando modelos
+                    matemáticos de posição, perigeu, inclinação e período.
+                </p>
+
+                <div class="chips">
+                    <small>SGP4 Propagator</small>
+                    <small>TLE Parser</small>
+                </div>
+            </article>
+
+            <article class="step-card">
+                <span>03</span>
+                <h2>Análise de Risco</h2>
+                <p>
+                    Detecção de conjunções via CDM. Cálculo de miss distance,
+                    tempo de proximidade e colisão por evento.
+                </p>
+
+                <div class="chips">
+                    <small>CDM Conjunction</small>
+                    <small>Pc Calculator</small>
+                </div>
+            </article>
+
+            <article class="step-card">
+                <span class="red-number">04</span>
+                <h2>Emissão de Alerta</h2>
+                <p>
+                    Notificação ao operador com TCA, miss distance e Pc.
+                    Classificação por nível: WATCH, CAUTION e RED.
+                </p>
+
+                <div class="chips">
+                    <small class="alert-chip">Alert Engine</small>
+                </div>
+            </article>
+        </section>
+
+        <section class="data-section">
+            <div class="data-intro">
+                <p class="status">Fontes de dados</p>
+                <p>
+                    Dados abertos e verificados de agências espaciais internacionais.
+                </p>
+            </div>
+
+            <div class="data-grid">
+                <article class="data-card">
+                    <div class="card-header">
+                        <h3>Space-Track.org</h3>
+                        <span>Norad</span>
+                    </div>
+
+                    <p>
+                        Catálogo de objetos orbitais, TLEs, dados de conjunção
+                        e histórico de manobras.
+                    </p>
+
+                    <ul>
+                        <li>OBJECT_NAME, NORAD_CAT_ID</li>
+                        <li>APOGEE, PERIGEE, INCLINATION</li>
+                        <li>RCS_SIZE, OBJECT_TYPE</li>
+                    </ul>
+                </article>
+
+                <article class="data-card">
+                    <div class="card-header">
+                        <h3>ESA DISCOS</h3>
+                        <span>ESA</span>
+                    </div>
+
+                    <p>
+                        Database of In-Space Objects. Dados complementares sobre
+                        fragmentação, massa e área de seção transversal.
+                    </p>
+
+                    <ul>
+                        <li>COSPAR ID, MASS (kg)</li>
+                        <li>CROSS_SECTION (m²)</li>
+                        <li>ORBITAL_REGIME</li>
+                    </ul>
+                </article>
+
+                <article class="data-card">
+                    <div class="card-header">
+                        <h3>CDM — Conjunções</h3>
+                        <span class="alert-label">Alerta</span>
+                    </div>
+
+                    <p>
+                        Conjunction Data Messages. Eventos de aproximação com
+                        probabilidade de colisão calculada.
+                    </p>
+
+                    <ul>
+                        <li>TCA (Time of Closest Approach)</li>
+                        <li>MISS_DISTANCE (km)</li>
+                        <li>COLLISION_PROBABILITY</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span>© OrbitalGuard</span>
+        <span>Dados: ESA DISCOS · NASA Space-Track · NORAD</span>
+        <span>© 2025 OrbitalGuard</span>
+    </footer>
+
+<div class="side-menu">
+
+        <a href="../index.html">Problema</a>
+        <a href="./tech.html">Tecnologia</a>
+        <a href="./map.html">Mapa de Órbitas</a>
+        <a href="./alert.html">Alertas</a>
+        <a href="./about.html">Sobre</a>
+        <a href="../pages/access.html" class="menu-operator">Acesso Operadores</a>
+
+    <script src="../assets/js/menu.js"></script>
+
+</body>
+
+</html>
