@@ -412,31 +412,7 @@ body {
     }
 
     .btn-outline {
-        display: block;
-        width: 18px;
-        height: 12px;
-        border: none;
-        padding: 0;
-        font-size: 0;
-        position: relative;
-    }
-
-    .btn-outline::before,
-    .btn-outline::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        width: 18px;
-        height: 2px;
-        background: #6d829b;
-    }
-
-    .btn-outline::before {
-        top: 1px;
-    }
-
-    .btn-outline::after {
-        bottom: 1px;
+        display: none;
     }
 
     .map-view {
